@@ -1,0 +1,249 @@
+body{
+    background-color:  #f8e9dd;
+}
+div{
+    box-sizing: border-box;
+    margin:0;
+}
+p{
+    margin:0;
+}
+hr{
+    height:2px;
+    margin-top: 20px;
+    background-color:#f8e9dd;
+    border: none;
+}
+
+/* My Balance Div Section */
+
+.balanceDiv{
+    border: none;
+    background-color: #ec775f;
+    height: 100px;
+    width: 400px;
+    border-radius: 15px;
+}
+
+.upper-right-section{
+    display: inline-block;
+    margin-left: 180px;
+}
+.bal{
+    margin-top: 20px;
+    margin-left: 25px;
+    color: #f8e9dd;
+    font-size: 14px;
+    font-family: 'Karla', sans-serif;
+}
+.bal-num{
+    margin-top: 5px;
+    margin-left: 20px;
+    color: white;
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.upper-left-section{
+    display: inline-block;
+}
+
+/* Weak Card */
+
+.weekCard{
+    border:none;
+    background-color: #fffaf5;
+    height: 320px;
+    width:400px;
+    margin-top: 15px;
+    border-radius: 15px;
+    padding:25px;
+}
+
+/* Upper text part of the Weak Card */
+
+.text{
+    font-family: 'Karla', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* Bar char Section of the  Weak Card*/
+.bar-chart{
+    width:100%;
+    height: 150px;
+    padding-left: 5px;
+    padding: 0;
+}
+.bar{
+    height:100%;
+    width:35px;
+    margin-left: 10px;
+    margin-top: 15px;
+    /* margin-bottom: 15px; */
+    display: inline-block;
+    border-radius: 5px;
+}
+.bar-bal{
+    padding: 2px;
+    padding-left:7px;
+    font-size: 13px;
+    opacity: 0.5;
+    font-family: 'Karla', sans-serif;
+}
+
+.bar-graph{
+    height: 75%;
+    width:100%;
+    border-radius:5px;
+    position: relative;
+}
+/* Monday */
+.mon-bar-graph{
+    height: 10%;
+    width: 100%;
+    background-color: #ec775f;
+    border-radius:5px;
+    position: absolute;
+    bottom: 0;
+}
+/* Tuesday */
+.tus-bar-graph{
+    height: 10%;
+    width: 100%;
+    background-color: #ec775f;
+    border-radius:5px;
+    position: absolute;
+    bottom: 0;
+}
+/* Wednesday */
+.wed-bar-graph{
+    height: 10%;
+    width: 100%;
+    background-color: #ec775f;
+    border-radius:5px;
+    position: absolute;
+    bottom: 0;
+}
+/* Thursday */
+.thu-bar-graph{
+    height: 10%;
+    width: 100%;
+    background-color: #ec775f;
+    border-radius:5px;
+    position: absolute;
+    bottom: 0;
+}
+/* Friday */
+.fri-bar-graph{
+    height: 10%;
+    width: 100%;
+    background-color: #ec775f;
+    border-radius:5px;
+    position: absolute;
+    bottom: 0;
+}
+/* Saturday */
+.sat-bar-graph{
+    height: 10%;
+    width: 100%;
+    background-color: #ec775f;
+    border-radius:5px;
+    position: absolute;
+    bottom: 0;
+}
+/* Sunday */
+.sun-bar-graph{
+    height: 10%;
+    width: 100%;
+    background-color: #ec775f;
+    border-radius:5px;
+    position: absolute;
+    bottom: 0;
+}
+
+.bar-text{
+    padding: 2px;
+    padding-left:7px;
+    font-size: 13px;
+    opacity: 0.5;
+    font-family: 'Karla', sans-serif;
+}
+
+/* Bottom Section of the Weak card */
+
+.bottom-section{
+    font-family: 'Karla', sans-serif;
+}
+.pl1{
+    margin-top:10px;
+    font-size: 13px;
+    opacity: 0.5;
+}
+.pl2{
+    margin-top: 5px;
+    font-size:35px;
+    font-weight: 700;
+}
+
+
+
+/* Input Section */
+
+.input-section{
+    border: none;
+    background-color: #ec775f;
+    height: 100px;
+    width: 400px;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 15px;
+}
+.enter{
+    margin-left: 5px;
+    margin-bottom: 10px;
+    color: #f8e9dd;
+    font-size: 14px;
+    font-family: 'Karla', sans-serif;
+}
+.input-div{
+    display: inline-block;
+}
+.input{
+    /* margin: 5px; */
+    width: 200px;
+    height: 35px;
+    border: none;
+    background-color:#fffaf5;
+    border-radius: 5px;
+    color: black;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    outline: none;
+}
+.input:hover{
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+}
+.btn-div{
+    display: inline-block;
+    position:relative;
+    top: -3px;
+}
+.btn{
+    background-color:#f8e9dd;
+    border: none;
+    height: 35px;
+    width: 60px;
+    border-radius: 5px;
+    margin-left: 70px;
+    color: black;
+    font-size: 14px;
+    font-family: 'Karla', sans-serif;
+    
+}
+.btn:hover{
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
