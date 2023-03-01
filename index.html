@@ -167,16 +167,16 @@
         alert('please enter a numerical value.');
       }
 
-      let remBal=Number(myBalance.innerHTML);
+      if(num>500){
+          alert('Sorry your spending amount is exceeding 500.');
+      }
+      else{
+              let remBal=Number(myBalance.innerHTML);
       myBalance.innerHTML=remBal-num;
 
       let thisMonth=Number(monthBal.innerHTML);
       monthBal.innerHTML=thisMonth+num;
-
-      if(num>500){
-          alert('Sorry your spending amount is exceeding 500.');
-      }
-
+        
       switch(dayToday){
           case 0:
               document.querySelector('.sun-bar-graph').style.height= (num/5)+'%';
@@ -206,6 +206,7 @@
               document.querySelector('.sat-bar-graph').style.height= (num/5)+'%';
               document.querySelector('.sat-bar-bal').innerHTML=input;
               break;
+      }
       }
   }
 
