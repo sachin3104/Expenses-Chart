@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Expenses Chart</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div class="main">
+
+    <div class="balanceDiv">
+
+      <div class="upper-left-section">
+        <div class="bal">My balance</div>
+        <div class="bal-num">950</div>
+      </div>
+
+      <div class="upper-right-section">
+        <svg width="72" height="48" viewBox="0 0 72 48" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#382314" cx="48" cy="24" r="24"/><circle stroke="#FFF" stroke-width="2" cx="24" cy="24" r="23"/></g></svg>
+      </div>
+    </div>
+
+    <div class="weekCard">
+      <!-- upper Text section in weak Card -->
+      <div class="text">Spending - Last 7 days </div>
+
+      <div class="bar-chart">
+        <!-- monday bar -->
+        <div class="bar">
+          <div class="bar-bal mon-bar-bal">50</div>
+          <div class="bar-graph ">
+            <div class="mon-bar-graph"></div>
+          </div>
+          <div class="bar-text">mon</div>
+        </div>
+        <!-- tuesday bar -->
+        <div class="bar">
+          <div class="bar-bal tus-bar-bal">50</div>
+          <div class="bar-graph">
+            <div class="tus-bar-graph"></div>
+          </div>
+          <div class="bar-text">tus</div>
+        </div>
+        <!-- wednesday bar -->
+        <div class="bar">
+          <div class="bar-bal wed-bar-bal">50</div>
+          <div class="bar-graph">
+            <div class="wed-bar-graph"></div>
+          </div>
+          <div class="bar-text">wed</div>
+        </div>
+        <!-- thursday bar -->
+        <div class="bar">
+          <div class="bar-bal thu-bar-bal">50</div>
+          <div class="bar-graph">
+            <div class="thu-bar-graph"></div>
+          </div>
+          <div class="bar-text">thu</div>
+        </div>
+        <!-- friday bar -->
+        <div class="bar">
+          <div class="bar-bal fri-bar-bal">50</div>
+          <div class="bar-graph">
+            <div class="fri-bar-graph"></div>
+          </div>
+          <div class="bar-text">fri</div>
+        </div>
+        <!-- saturday bar -->
+        <div class="bar">
+          <div class="bar-bal sat-bar-bal">50</div>
+          <div class="bar-graph">
+            <div class="sat-bar-graph"></div>
+          </div>
+          <div class="bar-text">sat</div>   
+        </div>
+        <!-- sunday bar -->
+        <div class="bar">
+            <div class="bar-bal sun-bar-bal">50</div>
+            <div class="bar-graph">
+              <div class="sun-bar-graph"></div>
+            </div>
+            <div class="bar-text">sun</div>
+        </div>
+          
+      </div>
+
+      <hr>
+
+      <div class="bottom-section">
+
+        <div class="bottom-left-section">
+          <p class="pl1">Total this month</p>
+          <p class="pl2">350</p>
+        </div>
+      </div>
+        
+    </div>
+
+    <div class="input-section">
+      <div class="enter">Enter today's spending</div>
+      
+      <div class="input-div">
+        <input type="text"  class="input">
+      </div>
+
+      <div class="btn-div">
+        <button class="btn">Enter</button>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+<script>
+
+  let input=document.querySelector('.input').value;
+
+  const myBalance=document.querySelector('.bal-num');
+  const monthBal=document.querySelector('.pl2');
+
+
+  const dateToday= new Date();
+  const dayToday= dateToday.getDay();
+
+  switch(dayToday){
+      case 0:
+          document.querySelector('.sun-bar-graph').style.backgroundColor="#76b5bc";
+          break;
+      case 1:
+          document.querySelector('.mon-bar-graph').style.backgroundColor="#76b5bc"; 
+          break;
+      case 2:
+          document.querySelector('.tus-bar-graph').style.backgroundColor="#76b5bc";
+          break;
+      case 3:
+          document.querySelector('.wed-bar-graph').style.backgroundColor="#76b5bc";
+          break;
+      case 4:
+          document.querySelector('.thu-bar-graph').style.backgroundColor="#76b5bc";
+          break;
+      case 5:
+          document.querySelector('.fri-bar-graph').style.backgroundColor="#76b5bc";
+          break;
+      case 6:
+          document.querySelector('.sat-bar-graph').style.backgroundColor="#76b5bc";
+          break;
+  }
+
+  function pressBtn(){
+      let input=document.querySelector('.input').value;
+      
+      let num=(Number(input));
+      
+      if(isNaN(num)){
+        alert('please enter a numerical value.');
+      }
+      
+      if(num>500){
+        alert('Sorry your spending amount is exceeding 500.');
+      }
+      else{
+        
+        const myBalance=document.querySelector('.bal-num');
+        const monthBal=document.querySelector('.pl2');
+        
+        let remBal=Number(myBalance.innerHTML);
+        myBalance.innerHTML=remBal-num;
+        
+        let thisMonth=Number(monthBal.innerHTML);
+        monthBal.innerHTML=thisMonth+num;
+
+      switch(dayToday){
+          case 0:
+              document.querySelector('.sun-bar-graph').style.height= (num/5)+'%';
+              document.querySelector('.sun-bar-bal').innerHTML=input;
+              break;
+          case 1:
+              document.querySelector('.mon-bar-graph').style.height= (num/5)+'%';
+              document.querySelector('.mon-bar-bal').innerHTML=input;
+              break;
+          case 2:
+              document.querySelector('.tus-bar-graph').style.height= (num/5)+'%';
+              document.querySelector('.tus-bar-bal').innerHTML=input;
+              break;
+          case 3:
+              document.querySelector('.wed-bar-graph').style.height= (num/5)+'%';
+              document.querySelector('.wed-bar-bal').innerHTML=input;
+              break;
+          case 4:
+              document.querySelector('.thu-bar-graph').style.height= (num/5)+'%';
+              document.querySelector('.thu-bar-bal').innerHTML=input;
+              break;
+          case 5:
+              document.querySelector('.fri-bar-graph').style.height= (num/5)+'%';
+              document.querySelector('.fri-bar-bal').innerHTML=input;
+              break;
+          case 6:
+              document.querySelector('.sat-bar-graph').style.height= (num/5)+'%';
+              document.querySelector('.sat-bar-bal').innerHTML=input;
+              break;
+      }
+    }
+  }
+
+  const button=document.querySelector('.btn');
+  button.addEventListener('click',pressBtn);
+
+</script>
+
+</html>
